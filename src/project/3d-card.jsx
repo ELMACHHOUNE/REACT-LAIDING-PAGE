@@ -49,7 +49,7 @@ export function CardContainer({ children, className }) {
 export function CardBody({ children, className }) {
   return (
     <div
-      className={`relative rounded-xl shadow-lg p-6 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 ${className}`}
+      className={`relative rounded-xl shadow-lg p-6 bg-white text-gray-900 border border-gray-200 ${className}`}
       style={{ transformStyle: "preserve-3d" }}
     >
       {children}
@@ -60,7 +60,7 @@ export function CardBody({ children, className }) {
 export function CardItem({ children, as: Component = "div", className, translateZ = 0, ...props }) {
   return (
     <Component
-      className={className}
+      className={className + " text-gray-900"} // اجبار النص يكون داكن
       {...props}
       style={{
         transform: `translateZ(${translateZ}px)`,

@@ -16,17 +16,17 @@ export default function Product() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
             <CardContainer key={product.id} className="inter-var">
-              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+              <CardBody className="bg-white text-gray-900 relative group/card hover:shadow-2xl hover:shadow-blue-500/[0.1] border border-gray-200 w-full h-auto rounded-xl p-6">
                 <CardItem
                   translateZ="50"
-                  className="text-xl font-bold text-neutral-600 dark:text-white"
+                  className="text-xl font-bold"
                 >
                   {product.title}
                 </CardItem>
                 <CardItem
                   as="p"
                   translateZ="60"
-                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  className="text-gray-600 text-sm max-w-sm mt-2"
                 >
                   {product.description}
                 </CardItem>
@@ -45,14 +45,14 @@ export default function Product() {
                 <div className="flex justify-between items-center mt-8">
                   <CardItem
                     translateZ={20}
-                    className="text-xl font-bold text-blue-600 dark:text-blue-400"
+                    className="text-xl font-bold text-blue-600"
                   >
                     {product.price}
                   </CardItem>
                   <CardItem
                     translateZ={20}
                     as="button"
-                    className="px-4 py-2 rounded-xl bg-blue-600 dark:bg-blue-700 dark:text-white text-white text-xs font-bold hover:bg-blue-700 transition-colors"
+                    className="px-4 py-2 rounded-xl bg-blue-600 text-white text-xs font-bold hover:bg-blue-700 transition-colors"
                   >
                     Ajouter au panier
                   </CardItem>
